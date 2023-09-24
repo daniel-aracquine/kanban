@@ -1,9 +1,6 @@
-import Card from "../utils/Card/Card";
-
-const statusTypes = ['Backlog', 'Todo', 'In progress', 'Done', 'Cancelled']
-const priorityTypes = ['No Priority','Urgent', 'High', 'Medium', 'Low']
-const priorityIconClasses = ['ellipsis-icon', 'urgent-icon', 'high-icon', 'medium-icon', 'low-icon']
-const statusIconClasses = ['backlog-icon', 'circle-icon', 'progress-icon', 'done-icon', 'cancel-icon']
+import Card from "./Card";
+import statusTypes from "../enums/statusTypes";
+import priorityTypes from "../enums/priorityTypes";
 
 function KanbanBoard(props) {
   const {data, header} = getFormattedDataAndHeader(props)
@@ -16,30 +13,29 @@ function KanbanBoard(props) {
 }
 
 
-
 function getTasks(data, groupBy, users) {
   if(groupBy === 'Status') {
-    return getTasksByStatus(data, users);
+    return getAppropriateTasks(data, users, statusTypes.types);
   };
   if(groupBy === 'Priority') {
-    return getTasksByPriority(data, users);
+    return getAppropriateTasks(data, users, priorityTypes.types);
   };
   if(groupBy === 'User') {
-    return getTasksByUser(data);
+    const usersKeys = Object.keys(data);
+    return getAppropriateTasks(data, users, usersKeys, false);
   };
 }
 
 
-
-function getTasksByStatus(data, users) {
-  const tasksArray = statusTypes.map((element) => {
+function getAppropriateTasks(data, users, array, displayUsername = true) {
+  const tasksArray = array.map((element) => {
     const tasks = data[element].map((task) => {
       return (
         <Card 
           id={task.id}
           title={task.title}
           tags={task.tag}
-          username={users.find(user => user.id === task.userId).name}
+          username={displayUsername ? users.find(user => user.id === task.userId).name : undefined}
         />
       )
     });
@@ -57,64 +53,6 @@ function getTasksByStatus(data, users) {
     </div>
   );
 }
-
-
-function getTasksByPriority(data, users) {
-  const tasksArray = priorityTypes.map((element) => {
-    const tasks = data[element].map((task) => {
-      return (
-        <Card 
-          id={task.id}
-          title={task.title}
-          tags={task.tag}
-          username={users.find(user => user.id === task.userId).name}
-        />
-      )
-    });
-
-    return (
-      <div className="tasksRow">
-        {tasks}
-      </div>
-    )
-  });
-
-  return (
-    <div className="tasks">
-      {tasksArray}
-    </div>
-  );
-}
-
-
-function getTasksByUser(data) {
-  const users = Object.keys(data);
-  users.sort()
-  const tasksArray = users.map((element) => {
-    const tasks = data[element].map((task) => {
-      return (
-        <Card 
-          id={task.id}
-          title={task.title}
-          tags={task.tag}
-        />
-      )
-    });
-
-    return (
-      <div className="tasksRow">
-        {tasks}
-      </div>
-    )
-  });
-
-  return (
-    <div className="tasks">
-      {tasksArray}
-    </div>
-  );
-}
-
 
 
 function getFormattedDataAndHeader(props) {
@@ -129,31 +67,34 @@ function getFormattedDataAndHeader(props) {
   };
 }
 
-
-
-function getHeaderElements(types, data, groupBy) {
-  const headerelements = types.map((type, idx) => {
+function getHeader(types, data, groupBy) {
+  const headerElements = types.map((type, idx) => {
     return (
       <div className="header-element">
         <div>
-          {groupBy=='Priority' && <div className={`${priorityIconClasses[idx]}`}/>}
-          {groupBy=='Status' && <div className={`${statusIconClasses[idx]}`}/>}
+          {groupBy=='Priority' && <div className={`${priorityTypes.getIconClass(type)} icon-common`}/>}
+          {groupBy=='Status' && <div className={`${statusTypes.getIconClass(type)} icon-common`}/>}
           {groupBy=='User' && <span className="user-initials">{getInitials(type)}</span>}
           {type}
           &nbsp;&nbsp;
           <span className="numberTasks">{data[type].length}</span>
         </div>
         <div>
-          <div className="plus-icon"></div>
-          <div className="ellipsis-icon"></div>
+          <div className="plus-icon icon-common"></div>
+          <div className="ellipsis-icon icon-common"></div>
         </div>
       </div>
     )
   });
 
-  return headerelements;
-}
+  const header = (
+    <div className="header">
+      {headerElements}
+    </div>
+  );
 
+  return header;
+}
 
 function getInitials(username) {
   const words = username.split(' ');
@@ -164,7 +105,7 @@ function getInitials(username) {
 
 function getFormattedDataAndHeaderByStatus(props) {
   const data = {}
-  statusTypes.forEach(element => {
+  statusTypes.types.forEach(element => {
     data[element] = []
   });
 
@@ -184,13 +125,7 @@ function getFormattedDataAndHeaderByStatus(props) {
     }
   };
 
-  const headerElements = getHeaderElements(statusTypes, data, props.groupBy);
-
-  const header = (
-    <div className="header">
-      {headerElements}
-    </div>
-  );
+  const header = getHeader(statusTypes.types, data, props.groupBy);
 
   return (
     {
@@ -201,16 +136,15 @@ function getFormattedDataAndHeaderByStatus(props) {
 }
 
 
-
 function getFormattedDataAndHeaderByPriority(props) {
   const data = {}
-  priorityTypes.forEach(element => {
+  priorityTypes.types.forEach(element => {
     data[element] = []
   });
 
   if(props.data.tickets) {
     props.data.tickets.forEach(element => {
-      data[priorityTypes[element.priority]].push(element)
+      data[priorityTypes.types[element.priority]].push(element)
     });
   };
 
@@ -224,13 +158,7 @@ function getFormattedDataAndHeaderByPriority(props) {
     }
   };
 
-  const headerElements = getHeaderElements(priorityTypes, data, props.groupBy);
-
-  const header = (
-    <div className="header">
-      {headerElements}
-    </div>
-  );
+  const header = getHeader(priorityTypes.types, data, props.groupBy);
 
   return (
     {
@@ -274,13 +202,7 @@ function getFormattedDataAndHeaderByUser(props) {
   const users = props.data.users.map((user) => user.name);
   users.sort();
 
-  const headerElements = getHeaderElements(users, data, props.groupBy);
-
-  const header = (
-    <div className="header">
-      {headerElements}
-    </div>
-  );
+  const header = getHeader(users, data, props.groupBy);
 
   return (
     {

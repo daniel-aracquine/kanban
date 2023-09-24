@@ -1,48 +1,40 @@
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 
-import DisplaySelector from './components/DisplaySelector/DisplaySelector'
-import KanbanBoard from './components/KanbanBoard/KanbanBoard';
+import DisplaySelector from './components/DisplaySelector'
+import KanbanBoard from './components/KanbanBoard';
+import groupingTypes from './enums/groupingTypes';
+import orderingTypes from './enums/orderingTypes';
+import utilfunctions from './utils/utilfunctions';
 import './App.css';
 
-const groupingTypes = ['Status', 'User', 'Priority']
-const orderingTypes = ['Priority', 'Title']
 
 function App() {
-  setCookies();
+  if(utilfunctions.getCookie('groupingType') == null) utilfunctions.setCookie('groupingType', 0);
+  if(utilfunctions.getCookie('orderingType') == null) utilfunctions.setCookie('orderingType', 0);
+
   const [data, setData] = useState({});
-  useEffect(() => {
-    fetch('https://api.quicksell.co/v1/internal/frontend-assignment/')
-    .then((response) => response.json())
-    .then((json) => {
-      setData(json);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }, []);
+  utilfunctions.fetchData(setData);
 
-  const [groupingType, setGroupingType] = useState(getCookie('groupingType'));
-  const [orderingType, setOrderingType] = useState(getCookie('orderingType'));
+  const [groupingType, setGroupingType] = useState(utilfunctions.getCookie('groupingType'));
+  const [orderingType, setOrderingType] = useState(utilfunctions.getCookie('orderingType'));
 
-  const handleChangeGroupingType = (id) => {
+  const changeGrouping = (id) => {
     setGroupingType(id);
-    document.cookie = `groupingType=${id}; Secure`;
+    utilfunctions.setCookie('groupingType', id);
   }
 
-  const handleChangeOrderingType = (id) => {
+  const changeOrdering = (id) => {
     setOrderingType(id);
-    document.cookie = `orderingType=${id}; Secure`;
+    utilfunctions.setCookie('orderingType', id);
   }
 
   return (
     <div className="App">
-      <DisplaySelector 
-        groupingTypes = {groupingTypes}
-        orderingTypes = {orderingTypes}
+      <DisplaySelector
         groupingType = {groupingType}
         orderingType = {orderingType}
-        handleChangeGroupingType = {handleChangeGroupingType}
-        handleChangeOrderingType = {handleChangeOrderingType}
+        changeGrouping = {changeGrouping}
+        changeOrdering = {changeOrdering}
       />
       <KanbanBoard
         data = {data}
@@ -51,22 +43,6 @@ function App() {
       />
     </div>
   );
-}
-
-function setCookies() {
-  if(getCookie('groupingType') === null) document.cookie = "groupingType=0; Secure";
-  if(getCookie('orderingType') === null) document.cookie = "orderingType=0; Secure";
-}
-
-function getCookie(name) {
-  const cookies = document.cookie.split(';');
-  for (const cookie of cookies) {
-    const [cookieName, cookieValue] = cookie.trim().split('=');
-    if (cookieName === name) {
-      return cookieValue;
-    }
-  }
-  return null; // Cookie not found
 }
 
 export default App;

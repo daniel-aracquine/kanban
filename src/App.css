@@ -164,17 +164,6 @@ body{
   background: ghostwhite;
 }
 
-.icon {
-  font-size: 13px;
-  color: #91A5BE;
-  transform: rotate(0deg);
-  transition: all .2s ease-in-out;
-}
-
-.icon.open {
-  transform: rotate(90deg);
-}
-
 .dropdown-row{
   display: flex;
     flex-direction: row;
@@ -183,22 +172,28 @@ body{
     justify-content: space-between;
 }
 
+.icon-common {
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .plus-icon {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/plus.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .ellipsis-icon {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/ellipsis.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
+}
+
+.no-priority-icon {
+  width: 15px;
+  height: 15px;
+  background-image: url("../public/icons/no-priority.svg");
 }
 
 .urgent-icon {
@@ -206,64 +201,44 @@ body{
   height: 15px;
   margin-right: 2px;
   background-image: url("../public/icons/urgent.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .high-icon {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/high.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .low-icon {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/low.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .medium-icon {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/medium.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .dot-icon {
   width: 17px;
   height: 12px;
   background-image: url("../public/icons/dot-gray.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .circle-icon {
   width: 12px;
   height: 12px;
   background-image: url("../public/icons/circle.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
   margin-right: 2px;
 }
 
 .arrow-down-icon {
   width: 12px;
   height: 12px;
-  background-image: url("../public/icons/arrow-down.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: url("../public/icons/arrow-up.svg");
+  transform: rotate(180deg);
   margin-right: 2px;
 }
 
@@ -271,9 +246,6 @@ body{
   width: 12px;
   height: 12px;
   background-image: url("../public/icons/menu.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
   margin-right: 2px;
 }
 
@@ -282,9 +254,6 @@ body{
   height: 10px;
   margin-right: 2px;
   background-image: url("../public/icons/backlog.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .done-icon {
@@ -292,29 +261,27 @@ body{
   height: 11px;
   margin-right: 2px;
   background-image: url("../public/icons/done.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.cancel-icon {
+.cancelled-icon {
   width: 12px;
   height: 12px;
   margin-right: 2px;
   background-image: url("../public/icons/cancel.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.progress-icon {
+.in-progress-icon {
   width: 12px;
   height: 12px;
   margin-right: 2px;
   background-image: url("../public/icons/progress.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
+}
+
+.todo-icon {
+  width: 12px;
+  height: 12px;
+  background-image: url("../public/icons/todo.svg");
+  margin-right: 2px;
 }
 
 .numberTasks {

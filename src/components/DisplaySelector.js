@@ -1,4 +1,6 @@
-import Dropdown from "../utils/dropdown/Dropdown";
+import Dropdown from "./Dropdown";
+import groupingTypes from "../enums/groupingTypes";
+import orderingTypes from "../enums/orderingTypes";
 
 function DisplaySelector(props) {
 
@@ -12,8 +14,8 @@ function DisplaySelector(props) {
 
   const dropdown1 = (
     <Dropdown 
-      data = {props.groupingTypes}
-      handleChange = {props.handleChangeGroupingType}
+      data = {groupingTypes}
+      handleChange = {props.changeGrouping}
       selected = {props.groupingType}
       dropdownStyle = {dropdown1Style}
       style = {style1}
@@ -22,8 +24,8 @@ function DisplaySelector(props) {
 
   const dropdown2 = (
     <Dropdown 
-      data = {props.orderingTypes}
-      handleChange = {props.handleChangeOrderingType}
+      data = {orderingTypes}
+      handleChange = {props.changeOrdering}
       selected = {props.orderingType}
       dropdownStyle = {dropdown1Style}
       style = {style1}

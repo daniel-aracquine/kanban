@@ -6,7 +6,7 @@ function Card(props) {
         {props.username && <span className="user-initials">{getInitials(props.username)}</span>}
       </div>
       <div className="card-title">
-        <div className="circle-icon"/>
+        <div className="circle-icon icon-common"/>
         <span className="title">{props.title}</span>
       </div>
       {getTags(props.tags)}
@@ -15,7 +15,7 @@ function Card(props) {
 }
 
 function getTags(tags) {
-  const tagElemets = tags.map((tag, idx) => <div key={idx} className="tag"><div className="dot-icon"/>{tag}</div>)
+  const tagElemets = tags.map((tag, idx) => <div key={idx} className="tag"><div className="dot-icon icon-common"/>{tag}</div>)
   return(
     <div className="card-tags">
       {tagElemets}

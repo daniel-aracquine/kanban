@@ -12,9 +12,9 @@ function Dropdown(props) {
   return (
     <div className='dropdown'  style={props.style}>
       <div className='dropdown-header' onClick={toggleDropdown}>
-        {props.selected ===-1 && <div className='menu-icon'/>}
+        {props.selected ===-1 && <div className='menu-icon icon-common'/>}
         <div>{props.selected===-1 ? 'Display' : props.data[props.selected]}</div>
-        <div className='arrow-down-icon'/>
+        <div className='arrow-down-icon icon-common'/>
       </div>
       <div className={`dropdown-body ${isOpen && 'open'}`} style = {props.dropdownStyle}>
         {props.data.map((item, idx) => (
