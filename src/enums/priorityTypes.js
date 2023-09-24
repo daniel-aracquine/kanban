@@ -1,5 +1,5 @@
 const priorityTypes = {
-  types: ['No Priority','Urgent', 'High', 'Medium', 'Low']
+  types: ['No Priority', 'Low', 'Medium', 'High', 'Urgent']
 }
 
 priorityTypes.getIconClass = (type) => {
