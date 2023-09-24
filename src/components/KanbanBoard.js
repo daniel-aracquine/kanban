@@ -22,7 +22,7 @@ function getTasks(data, groupBy, users) {
   };
   if(groupBy === 'User') {
     const usersKeys = Object.keys(data);
-    userKeys.sort()
+    usersKeys.sort()
     return getAppropriateTasks(data, users, usersKeys, false);
   };
 }
