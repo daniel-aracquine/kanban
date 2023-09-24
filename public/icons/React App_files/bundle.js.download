@@ -14,8 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_DisplaySelector_DisplaySelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/DisplaySelector/DisplaySelector */ "./src/components/DisplaySelector/DisplaySelector.js");
-/* harmony import */ var _components_KanbanBoard_KanbanBoard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/KanbanBoard/KanbanBoard */ "./src/components/KanbanBoard/KanbanBoard.js");
+/* harmony import */ var _components_Filter_Filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Filter/Filter */ "./src/components/Filter/Filter.js");
+/* harmony import */ var _components_Board_Board__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Board/Board */ "./src/components/Board/Board.js");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
@@ -53,7 +53,7 @@ function App() {
   };
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("div", {
     className: "App",
-    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)(_components_DisplaySelector_DisplaySelector__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)(_components_Filter_Filter__WEBPACK_IMPORTED_MODULE_1__["default"], {
       groupingTypes: groupingTypes,
       orderingTypes: orderingTypes,
       groupingType: groupingType,
@@ -64,7 +64,7 @@ function App() {
       fileName: _jsxFileName,
       lineNumber: 39,
       columnNumber: 7
-    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)(_components_KanbanBoard_KanbanBoard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)(_components_Board_Board__WEBPACK_IMPORTED_MODULE_2__["default"], {
       data: data,
       groupBy: groupingTypes[groupingType],
       orderBy: orderingTypes[orderingType]
@@ -133,9 +133,9 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/components/DisplaySelector/DisplaySelector.js":
+/***/ "./src/components/Filter/Filter.js":
 /*!***********************************************************!*\
-  !*** ./src/components/DisplaySelector/DisplaySelector.js ***!
+  !*** ./src/components/Filter/Filter.js ***!
   \***********************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -149,10 +149,10 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-var _jsxFileName = "F:\\React\\anshuman_rathod\\assignment\\src\\components\\DisplaySelector\\DisplaySelector.js";
+var _jsxFileName = "F:\\React\\anshuman_rathod\\assignment\\src\\components\\Filter\\Filter.js";
 
 
-function DisplaySelector(props) {
+function Filter(props) {
   const dropdown1Style = {
     width: '100px'
   };
@@ -215,7 +215,7 @@ function DisplaySelector(props) {
     width: '100px'
   };
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
-    className: "DisplaySelector",
+    className: "Filter",
     children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(_utils_dropdown_Dropdown__WEBPACK_IMPORTED_MODULE_0__["default"], {
       data: dropdownData,
       handleChange: () => {},
@@ -233,10 +233,10 @@ function DisplaySelector(props) {
     columnNumber: 5
   }, this);
 }
-_c = DisplaySelector;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplaySelector);
+_c = Filter;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Filter);
 var _c;
-__webpack_require__.$Refresh$.register(_c, "DisplaySelector");
+__webpack_require__.$Refresh$.register(_c, "Filter");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -271,9 +271,9 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/components/KanbanBoard/KanbanBoard.js":
+/***/ "./src/components/Board/Board.js":
 /*!***************************************************!*\
-  !*** ./src/components/KanbanBoard/KanbanBoard.js ***!
+  !*** ./src/components/Board/Board.js ***!
   \***************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -287,20 +287,20 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-var _jsxFileName = "F:\\React\\anshuman_rathod\\assignment\\src\\components\\KanbanBoard\\KanbanBoard.js";
+var _jsxFileName = "F:\\React\\anshuman_rathod\\assignment\\src\\components\\Board\\Board.js";
 
 
 const statusTypes = ['Backlog', 'Todo', 'In progress', 'Done', 'Cancelled'];
 const priorityTypes = ['No Priority', 'Urgent', 'High', 'Medium', 'Low'];
 const priorityIconClasses = ['ellipsis-icon', 'urgent-icon', 'high-icon', 'medium-icon', 'low-icon'];
 const statusIconClasses = ['backlog-icon', 'circle-icon', 'progress-icon', 'done-icon', 'cancel-icon'];
-function KanbanBoard(props) {
+function Board(props) {
   const {
     data,
     header
   } = getFormattedDataAndHeader(props);
   return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
-    className: "KanbanBoard",
+    className: "Board",
     children: [header, getTasks(data, props.groupBy, props.data.users)]
   }, void 0, true, {
     fileName: _jsxFileName,
@@ -308,7 +308,7 @@ function KanbanBoard(props) {
     columnNumber: 5
   }, this);
 }
-_c = KanbanBoard;
+_c = Board;
 function getTasks(data, groupBy, users) {
   if (groupBy === 'Status') {
     return getTasksByStatus(data, users);
@@ -618,9 +618,9 @@ function getFormattedDataAndHeaderByUser(props) {
     header
   };
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (KanbanBoard);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Board);
 var _c;
-__webpack_require__.$Refresh$.register(_c, "KanbanBoard");
+__webpack_require__.$Refresh$.register(_c, "Board");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -830,7 +830,7 @@ function Dropdown(props) {
         lineNumber: 16,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)("div", {
-        className: "arrow-down-icon"
+        className: "arrow-down"
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 17,
@@ -41348,14 +41348,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body{
   margin: auto;
 }
 
-.DisplaySelector{
+.Filter{
   display: flex;
   height: 10%;
   width: 100%;
   margin: 20px 0;
 }
 
-.KanbanBoard{
+.Board{
   display: flex;
   flex-direction: column;
   min-height: 90vh;
@@ -41594,7 +41594,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body{
   margin-right: 2px;
 }
 
-.arrow-down-icon {
+.arrow-down {
   width: 12px;
   height: 12px;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
@@ -41656,7 +41656,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body{
 
 .numberTasks {
   color: gray;
-}`, "",{"version":3,"sources":["webpack://./src/App.css"],"names":[],"mappings":"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","sourcesContent":["body{\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.App{\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 98vw;\r\n  margin: auto;\r\n}\r\n\r\n.DisplaySelector{\r\n  display: flex;\r\n  height: 10%;\r\n  width: 100%;\r\n  margin: 20px 0;\r\n}\r\n\r\n.KanbanBoard{\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 90vh;\r\n  width: 98%;\r\n  background-color: #e8e8e8;\r\n  margin-bottom: 20px;\r\n  padding: 0 1%;\r\n}\r\n\r\n.card{\r\n  display: flex;\r\n  flex-direction: column;\r\n  background: #ececec;\r\n  justify-content: space-evenly;\r\n  margin: 10px 0;\r\n  padding: 5px 15px;\r\n  width: 90%;\r\n  height: 100px;\r\n  border: 1px solid #d4cece;\r\n  border-radius: 10px;\r\n  box-shadow: -1px 1px #d6d6d6;\r\n  font-size: 75%;\r\n}\r\n\r\n.card-id{\r\n  display: flex;\r\n  justify-content: space-between;\r\n  color: #656565;\r\n  font-weight: 500;\r\n}\r\n\r\n.user-initials {\r\n  background: #929ac2;\r\n  display: flex;\r\n  justify-content: center;\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n  padding: 2px;\r\n  font-size: 60%;\r\n  margin-right: 2px;\r\n  align-items: center;\r\n  width: 11px;\r\n  height: 11px;\r\n}\r\n\r\n.card-title{\r\n  display: flex;\r\n  font-weight: 500;\r\n  align-items: center;\r\n}\r\n\r\n.card-tags{\r\n  display: flex;\r\n}\r\n\r\n.tag{\r\n  display: flex;\r\n  width: fit-content;\r\n  padding: 3px 5px 3px 5px;\r\n  border: 1px solid #d0cccc;\r\n  margin-right: 5px;\r\n  border-radius: 7px;\r\n  color: #656565;\r\n  align-items: center;\r\n}\r\n\r\n.header{\r\n  display: flex;\r\n    width: 100%;\r\n    justify-content: space-between;\r\n    padding: 20px 0px;\r\n}\r\n\r\n.header-element{\r\n  display: flex;\r\n  width: 18%;\r\n  justify-content: space-between;\r\n  padding-left: 2px;\r\n}\r\n\r\n.header-element div{\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.tasks{\r\n  display: flex;\r\n    width: 100%;\r\n    justify-content: space-between;\r\n    padding: 10px 0px;\r\n}\r\n\r\n.tasksRow{\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 18%;\r\n}\r\n\r\n.dropdown {\r\n  border-radius: 5px;\r\n  box-shadow: 0 10px 25px rgba(0,0,0,.1);\r\n  background-color: white;\r\n  border: 1px solid black;\r\n}\r\n\r\n.dropdown-header {\r\n  padding: 3px 10px;\r\n  cursor: pointer;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.dropdown-body {\r\n  box-sizing: border-box;\r\n    padding: 5px;\r\n    border: 1px solid #E5E8EC;\r\n    border-radius: 5px;\r\n    display: none;\r\n    margin-top: 10px;\r\n    background: #cbcbcb;\r\n}\r\n\r\n.dropdown-body.open {\r\n  display: block;\r\n  position: absolute;\r\n}\r\n\r\n.dropdown-item {\r\n  padding: 10px;\r\n  margin: 2px 0;\r\n}\r\n\r\n.available-for-selection:hover {\r\n  cursor: pointer;\r\n  background: ghostwhite;\r\n}\r\n\r\n.selected {\r\n  cursor: default;\r\n  background: ghostwhite;\r\n}\r\n\r\n.icon {\r\n  font-size: 13px;\r\n  color: #91A5BE;\r\n  transform: rotate(0deg);\r\n  transition: all .2s ease-in-out;\r\n}\r\n\r\n.icon.open {\r\n  transform: rotate(90deg);\r\n}\r\n\r\n.dropdown-row{\r\n  display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    width: 100%;\r\n    justify-content: space-between;\r\n}\r\n\r\n.plus-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/plus.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.ellipsis-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/ellipsis.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.urgent-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/urgent.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.high-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/high.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.low-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/low.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.medium-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/medium.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.dot-icon {\r\n  width: 17px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/dot-gray.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.circle-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/circle.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  margin-right: 2px;\r\n}\r\n\r\n.arrow-down-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/arrow-down.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  margin-right: 2px;\r\n}\r\n\r\n.menu-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/menu.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  margin-right: 2px;\r\n}\r\n\r\n.backlog-icon {\r\n  width: 10px;\r\n  height: 10px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/backlog.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.done-icon {\r\n  width: 11px;\r\n  height: 11px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/done.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.cancel-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/cancel.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.progress-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/progress.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.numberTasks {\r\n  color: gray;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.css"],"names":[],"mappings":"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","sourcesContent":["body{\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.App{\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 98vw;\r\n  margin: auto;\r\n}\r\n\r\n.Filter{\r\n  display: flex;\r\n  height: 10%;\r\n  width: 100%;\r\n  margin: 20px 0;\r\n}\r\n\r\n.Board{\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 90vh;\r\n  width: 98%;\r\n  background-color: #e8e8e8;\r\n  margin-bottom: 20px;\r\n  padding: 0 1%;\r\n}\r\n\r\n.card{\r\n  display: flex;\r\n  flex-direction: column;\r\n  background: #ececec;\r\n  justify-content: space-evenly;\r\n  margin: 10px 0;\r\n  padding: 5px 15px;\r\n  width: 90%;\r\n  height: 100px;\r\n  border: 1px solid #d4cece;\r\n  border-radius: 10px;\r\n  box-shadow: -1px 1px #d6d6d6;\r\n  font-size: 75%;\r\n}\r\n\r\n.card-id{\r\n  display: flex;\r\n  justify-content: space-between;\r\n  color: #656565;\r\n  font-weight: 500;\r\n}\r\n\r\n.user-initials {\r\n  background: #929ac2;\r\n  display: flex;\r\n  justify-content: center;\r\n  border: 1px solid black;\r\n  border-radius: 10px;\r\n  padding: 2px;\r\n  font-size: 60%;\r\n  margin-right: 2px;\r\n  align-items: center;\r\n  width: 11px;\r\n  height: 11px;\r\n}\r\n\r\n.card-title{\r\n  display: flex;\r\n  font-weight: 500;\r\n  align-items: center;\r\n}\r\n\r\n.card-tags{\r\n  display: flex;\r\n}\r\n\r\n.tag{\r\n  display: flex;\r\n  width: fit-content;\r\n  padding: 3px 5px 3px 5px;\r\n  border: 1px solid #d0cccc;\r\n  margin-right: 5px;\r\n  border-radius: 7px;\r\n  color: #656565;\r\n  align-items: center;\r\n}\r\n\r\n.header{\r\n  display: flex;\r\n    width: 100%;\r\n    justify-content: space-between;\r\n    padding: 20px 0px;\r\n}\r\n\r\n.header-element{\r\n  display: flex;\r\n  width: 18%;\r\n  justify-content: space-between;\r\n  padding-left: 2px;\r\n}\r\n\r\n.header-element div{\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.tasks{\r\n  display: flex;\r\n    width: 100%;\r\n    justify-content: space-between;\r\n    padding: 10px 0px;\r\n}\r\n\r\n.tasksRow{\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 18%;\r\n}\r\n\r\n.dropdown {\r\n  border-radius: 5px;\r\n  box-shadow: 0 10px 25px rgba(0,0,0,.1);\r\n  background-color: white;\r\n  border: 1px solid black;\r\n}\r\n\r\n.dropdown-header {\r\n  padding: 3px 10px;\r\n  cursor: pointer;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.dropdown-body {\r\n  box-sizing: border-box;\r\n    padding: 5px;\r\n    border: 1px solid #E5E8EC;\r\n    border-radius: 5px;\r\n    display: none;\r\n    margin-top: 10px;\r\n    background: #cbcbcb;\r\n}\r\n\r\n.dropdown-body.open {\r\n  display: block;\r\n  position: absolute;\r\n}\r\n\r\n.dropdown-item {\r\n  padding: 10px;\r\n  margin: 2px 0;\r\n}\r\n\r\n.available-for-selection:hover {\r\n  cursor: pointer;\r\n  background: ghostwhite;\r\n}\r\n\r\n.selected {\r\n  cursor: default;\r\n  background: ghostwhite;\r\n}\r\n\r\n.icon {\r\n  font-size: 13px;\r\n  color: #91A5BE;\r\n  transform: rotate(0deg);\r\n  transition: all .2s ease-in-out;\r\n}\r\n\r\n.icon.open {\r\n  transform: rotate(90deg);\r\n}\r\n\r\n.dropdown-row{\r\n  display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    width: 100%;\r\n    justify-content: space-between;\r\n}\r\n\r\n.plus-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/plus.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.ellipsis-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/ellipsis.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.urgent-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/urgent.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.high-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/high.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.low-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/low.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.medium-icon {\r\n  width: 15px;\r\n  height: 15px;\r\n  background-image: url(\"../public/icons/medium.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.dot-icon {\r\n  width: 17px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/dot-gray.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.circle-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/circle.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  margin-right: 2px;\r\n}\r\n\r\n.arrow-down {\r\n  width: 12px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/arrow-down.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  margin-right: 2px;\r\n}\r\n\r\n.menu-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  background-image: url(\"../public/icons/menu.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n  margin-right: 2px;\r\n}\r\n\r\n.backlog-icon {\r\n  width: 10px;\r\n  height: 10px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/backlog.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.done-icon {\r\n  width: 11px;\r\n  height: 11px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/done.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.cancel-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/cancel.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.progress-icon {\r\n  width: 12px;\r\n  height: 12px;\r\n  margin-right: 2px;\r\n  background-image: url(\"../public/icons/progress.svg\");\r\n  background-size: cover; /* Adjust background sizing as needed */\r\n  background-repeat: no-repeat;\r\n  background-position: center center;\r\n}\r\n\r\n.numberTasks {\r\n  color: gray;\r\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);

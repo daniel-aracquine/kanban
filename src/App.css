@@ -11,21 +11,21 @@ body{
   margin: auto;
 }
 
-.DisplaySelector{
+.Filter{
   display: flex;
   height: 10%;
   width: 100%;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
-.KanbanBoard{
+.Board{
   display: flex;
   flex-direction: column;
   min-height: 90vh;
-  width: 98%;
-  background-color: #e8e8e8;
-  margin-bottom: 20px;
-  padding: 0 1%;
+  width: 99%;
+  background-color: #dbdada;
+  margin-bottom: 10px;
+  padding: 0 5px;
 }
 
 .card{
@@ -39,8 +39,7 @@ body{
   height: 100px;
   border: 1px solid #d4cece;
   border-radius: 10px;
-  box-shadow: -1px 1px #d6d6d6;
-  font-size: 75%;
+  font-size: 12px;
 }
 
 .card-id{
@@ -50,20 +49,6 @@ body{
   font-weight: 500;
 }
 
-.user-initials {
-  background: #929ac2;
-  display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 2px;
-  font-size: 60%;
-  margin-right: 2px;
-  align-items: center;
-  width: 11px;
-  height: 11px;
-}
-
 .card-title{
   display: flex;
   font-weight: 500;
@@ -71,31 +56,10 @@ body{
   justify-content: space-between;
 }
 
-.card-tags{
-  display: flex;
-}
-
-.tag{
-  display: flex;
-  width: fit-content;
-  padding: 3px 5px 3px 5px;
-  border: 1px solid #d0cccc;
-  margin-right: 5px;
-  border-radius: 7px;
-  color: #656565;
-  align-items: center;
-}
-
-.header{
-  display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 20px 0px;
-}
 
 .header-element{
   display: flex;
-  width: 18%;
+  width: 16.5%;
   justify-content: space-between;
   padding-left: 2px;
 }
@@ -116,7 +80,7 @@ body{
 .tasksRow{
   display: flex;
   flex-direction: column;
-  width: 18%;
+  width: 16.5%;
 }
 
 .dropdown {
@@ -124,6 +88,23 @@ body{
   box-shadow: 0 10px 25px rgba(0,0,0,.1);
   background-color: white;
   border: 1px solid black;
+  margin-left: 10px;
+}
+.tag{
+  display: flex;
+  width: fit-content;
+  padding: 3px 5px 3px 5px;
+  border: 1px solid #d0cccc;
+  border-radius: 7px;
+  color: #656565;
+  align-items: center;
+}
+
+.header{
+  display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0px;
 }
 
 .dropdown-header {
@@ -154,25 +135,9 @@ body{
   margin: 2px 0;
 }
 
-.available-for-selection:hover {
+.selection:hover {
   cursor: pointer;
   background: ghostwhite;
-}
-
-.selected {
-  cursor: default;
-  background: ghostwhite;
-}
-
-.icon {
-  font-size: 13px;
-  color: #91A5BE;
-  transform: rotate(0deg);
-  transition: all .2s ease-in-out;
-}
-
-.icon.open {
-  transform: rotate(90deg);
 }
 
 .dropdown-row{
@@ -183,142 +148,25 @@ body{
     justify-content: space-between;
 }
 
-.plus-icon {
+.plus {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/plus.svg");
   background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.ellipsis-icon {
+.ellipsis {
   width: 15px;
   height: 15px;
   background-image: url("../public/icons/ellipsis.svg");
   background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.urgent-icon {
-  width: 15px;
-  height: 15px;
-  margin-right: 2px;
-  background-image: url("../public/icons/urgent.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.high-icon {
-  width: 15px;
-  height: 15px;
-  background-image: url("../public/icons/high.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.low-icon {
-  width: 15px;
-  height: 15px;
-  background-image: url("../public/icons/low.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.medium-icon {
-  width: 15px;
-  height: 15px;
-  background-image: url("../public/icons/medium.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.dot-icon {
-  width: 17px;
-  height: 12px;
-  background-image: url("../public/icons/dot-gray.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.circle-icon {
-  width: 12px;
-  height: 12px;
-  background-image: url("../public/icons/circle.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 2px;
-}
-
-.arrow-down-icon {
+.arrow-down {
   width: 12px;
   height: 12px;
   background-image: url("../public/icons/arrow-down.svg");
   background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 2px;
-}
-
-.menu-icon {
-  width: 12px;
-  height: 12px;
-  background-image: url("../public/icons/menu.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 2px;
-}
-
-.backlog-icon {
-  width: 10px;
-  height: 10px;
-  margin-right: 2px;
-  background-image: url("../public/icons/backlog.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.done-icon {
-  width: 11px;
-  height: 11px;
-  margin-right: 2px;
-  background-image: url("../public/icons/done.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.cancel-icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 2px;
-  background-image: url("../public/icons/cancel.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.progress-icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 2px;
-  background-image: url("../public/icons/progress.svg");
-  background-size: cover; /* Adjust background sizing as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.numberTasks {
-  color: gray;
 }
 
 .title {

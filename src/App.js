@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react';
 
-import DisplaySelector from './components/DisplaySelector/DisplaySelector'
-import KanbanBoard from './components/KanbanBoard/KanbanBoard';
+import Filter from './components/Filter/Filter'
+import Board from './components/Board/Board';
 import './App.css';
 
 const groupingTypes = ['Status', 'User', 'Priority']
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <DisplaySelector 
+      <Filter 
         groupingTypes = {groupingTypes}
         orderingTypes = {orderingTypes}
         groupingType = {groupingType}
@@ -44,7 +44,7 @@ function App() {
         handleChangeGroupingType = {handleChangeGroupingType}
         handleChangeOrderingType = {handleChangeOrderingType}
       />
-      <KanbanBoard
+      <Board
         data = {data}
         groupBy = {groupingTypes[groupingType]}
         orderBy = {orderingTypes[orderingType]}
